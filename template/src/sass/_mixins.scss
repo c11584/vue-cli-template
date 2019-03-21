@@ -1,0 +1,39 @@
+@mixin borderTop {
+    background-image: linear-gradient(180deg, $border-color, $border-color 50%, transparent 50%);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-origin: border-box;
+}
+
+@mixin borderBottom {
+    background-image: linear-gradient(0deg, $border-color, $border-color 50%, transparent 50%);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-origin: border-box;
+}
+
+@mixin borderLeft {
+    background-image: linear-gradient(90deg, $border-color, $border-color 50%, transparent 50%);
+    background-size: 1px 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-origin: border-box;
+}
+
+@mixin borderRight {
+    background-image: linear-gradient(90deg, $border-color, $border-color 50%, transparent 50%);
+    background-size: 1px 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-origin: border-box;
+}
+
+@mixin flex($direction: row, $items: initial, $content: initial) {
+    display: flex;
+    display: -webkit-box;
+    flex-direction: $direction;
+    align-items: $items;
+    justify-content: $content;
+}

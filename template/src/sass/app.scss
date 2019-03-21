@@ -1,0 +1,65 @@
+@import "./variables";
+@import "./mixins";
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background: $bg-body;
+    color: $text-color;
+    min-height: 100%;
+    font-family: Arial,Tahoma,'Microsoft Yahei','\5b8b\4f53',sans-serif;
+}
+body {
+    min-width: 1024px;
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+input, select, textarea {
+    resize: none;
+    outline: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.flex-center {
+    justify-content: center;
+}
+.lCenter {
+    align-items: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.has-follow {
+    position: relative;
+    padding-right: 30px !important;
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        border: solid 2px #bfc0c1;
+        border-bottom-width: 0;
+        border-left-width: 0;
+        content: " ";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        transform: translateY(-50%) rotate(45deg);
+        // margin-top: -7px;
+        top: 50%;
+        right: 15px;
+    }
+}
+
+@import "./common";
+@import "./components";
+@import "./modules";
+@import "./element";

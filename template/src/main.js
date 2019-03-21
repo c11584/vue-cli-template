@@ -7,17 +7,25 @@ import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
+import Config from '@/config'
 {{#vuex}}
 import Vuex from 'vuex'
 import store from './store/store'
 Vue.use(Vuex)
 {{/vuex}}
 
+require('./sass/app.scss')
+
 Vue.config.productionTip = false
+
+import registerComponents from '@/common/components'
+import registerMixins from './mixins.js'
+
+registerComponents(Vue)
+registerMixins(Vue)
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
   {{#router}}
   router,
   {{/router}}
@@ -27,8 +35,4 @@ new Vue({
   {{#if_eq build "runtime"}}
   render: h => h(App)
   {{/if_eq}}
-  {{#if_eq build "standalone"}}
-  components: { App },
-  template: '<App/>'
-  {{/if_eq}}
-})
+}).$mount('#app')
