@@ -129,6 +129,11 @@ module.exports = {
             type: 'confirm',
             message: 'Setup e2e tests with Nightwatch?',
         },
+        vuex: {
+            when: 'isNotTest',
+            type: 'confirm',
+            message: 'Install vuex?',
+        },
         autoInstall: {
             when: 'isNotTest',
             type: 'list',
@@ -149,11 +154,6 @@ module.exports = {
                     short: 'no',
                 },
             ],
-        },
-        vuex: {
-            when: 'isNotTest',
-            type: 'confirm',
-            message: 'Install vuex?'
         }
     },
     filters: {
