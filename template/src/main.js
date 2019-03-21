@@ -9,9 +9,7 @@ import router from './router'
 {{/router}}
 import Config from '@/config'
 {{#vuex}}
-import Vuex from 'vuex'
 import store from './common/store'
-Vue.use(Vuex)
 {{/vuex}}
 
 require('./sass/app.scss')
@@ -32,7 +30,5 @@ new Vue({
   {{#vuex}}
   store,
   {{/vuex}}
-  {{#if_eq build "runtime"}}
   render: h => h(App)
-  {{/if_eq}}
 }).$mount('#app')

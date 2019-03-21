@@ -1,4 +1,4 @@
-import ComponentUtil from '@/components/index.js'
+import ComponentUtil from '@/common/components/index.js'
 
 export default (Vue) => {
     Vue.mixin({

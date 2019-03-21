@@ -1,5 +1,5 @@
 export default [{
     path: '/',
     name: 'HelloWorld',
-    component: require('@/components/HelloWorld')
+    component: require('@/common/components/HelloWorld')
 }]
