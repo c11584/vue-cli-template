@@ -18,7 +18,7 @@ export default {
   name: 'App'{{#router}}{{else}},
   components: {
     HelloWorld
-  },{{/router}}
+  }{{/router}},
     created() {
         TestService.testAxios()
     }
