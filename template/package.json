@@ -30,7 +30,7 @@
     "vuex": "^2.1.1",{{/vuex}}
     "axios": "^0.18.0",
     "lodash": "^4.17.11",
-    "qs": "^6.7.0",
+    "qs": "^6.7.0"
   },
   "devDependencies": {
     {{#lint}}
